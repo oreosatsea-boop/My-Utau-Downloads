@@ -1,0 +1,139 @@
+/* Global Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #fbde4f;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 50px;
+}
+
+.navbar nav a.active, .navbar nav a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Layout Container */
+.container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+/* Info Section styling */
+.character-name {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.character-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* Content Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #888;
+}
+
+.tab-btn.active {
+    color: #ff5722; /* Accent color matching your screenshot */
+    border-bottom: 3px solid #ff5722;
+    font-weight: bold;
+}
+
+/* Download Link Section */
+.link-group {
+    margin-bottom: 30px;
+}
+
+.link-group h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ff5722;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.link-group ul {
+    list-style: none;
+}
+
+.link-group ul li {
+    margin-bottom: 8px;
+}
+
+.link-group a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.link-group a:hover {
+    text-decoration: underline;
+}
+
+/* Character Image Sidebar */
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.character-img {
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+    object-fit: contain;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .image-section {
+        order: -1; /* Places character image at the top on mobile */
+    }
+}
